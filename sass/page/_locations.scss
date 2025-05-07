@@ -1,0 +1,206 @@
+@use "../base/colors" as colors;
+
+#background-location{
+    background-image: url("./assets/Maps.svg");
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+
+    a{
+        position: relative;
+        left: 200px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background-color: colors.$colors-black;
+        width: 264px;
+
+        p{
+            font-family: 'Big Shoulders Display';
+            color: colors.$colors-white;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 12px;
+            letter-spacing: 1.2px;
+            width: 100%;
+            text-align: center;
+
+        }
+        &:hover{
+            background-color: colors.$colors-black-hover;
+        }
+    }
+}
+
+#background-center{
+    background-color: colors.$colors-black;
+    color:colors.$colors-white;
+    padding-inline: 365px;
+    padding-block: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 548px;
+
+    h2{
+        width: 50%;
+        font-size: 70px;
+        line-height: 70px;
+    }
+    div{
+        width: 50%;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            color: colors.$colors-brown;
+            font-size: 36px;
+            line-height: 36px;
+        }
+        p{
+            font-family: 'Outfit';
+            font-weight: lighter;
+            line-height: 32px;
+            font-size: 22px;
+        }
+    }
+}
+
+#footer-location{
+    background-color: colors.$colors-brown;
+    padding-inline: 365px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-block:56px;
+    height: 244px;
+    color: colors.$colors-black;
+
+    >img{
+        width: 160px;
+        color: black;
+    }
+    p{
+        width: 430px;
+        font-size: 18px;
+        font-family: 'Outfit';
+        font-weight: lighter;
+        line-height: 28px;
+    }
+    div{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 20px;
+        >img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    #background-location{
+        height: 600px;
+        a{
+            left: 40px;
+        }
+    }
+    #background-center{
+        padding-inline: 40px;
+        padding-block: 84px;
+        height: 436px;
+        gap: 68px;
+
+        h2{
+            font-size: 40px;
+            line-height: 40px;
+            width: auto;
+        }
+        div{
+            gap:20px;
+            width: auto;
+
+            h3{
+                font-size: 32px;
+                line-height: 32px;
+            }
+            p{
+                line-height: 28px;
+                font-size: 18px;
+            }
+        }
+    }  
+    #footer-location{
+        padding-inline: 40px;
+        >img{
+            width: 110px;
+        }
+        p{
+            width: 281px;
+            font-size: 16px;
+            line-height: 26px
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    #background-location{
+        height: 550px;
+        a{
+            position: static;
+        }
+    }
+    #background-center{
+        flex-direction: column;
+        padding-inline: 16px;
+        padding-block: 48px;
+        height: 493px;
+        justify-content: center;
+        gap: 64px;
+
+        h2{
+            font-size: 45px;
+            line-height: 40px;
+            letter-spacing: -5px;
+            width: auto;
+            br{
+                display: none;
+            }
+        }
+        div{
+            width: 100%;
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: lighter;
+
+            }
+            p:last-child{
+                br{
+                    display: none;
+                }
+            }
+        }
+    
+            
+
+        
+    }
+
+    #footer-location{
+        padding-inline: 24px;
+        padding-block: 48px;
+        flex-direction: column;
+        gap: 38px;
+        height: 100%;
+        >img{
+            width: 110px;
+        }
+        p{
+            width: 100%;
+        }
+    }
+
+}
